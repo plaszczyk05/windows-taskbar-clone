@@ -1,0 +1,606 @@
+*,
+*::before,
+*::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(win10.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.footer
+{
+    height: 45px;
+    width: 100%;
+    background-color: #1e2122;
+    position: absolute;
+    bottom: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.footer1 {
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.footer1 > * {
+  margin: 0;
+  height: 45px;
+}
+
+.group {
+  display: flex;
+  gap: 3px;
+}
+
+.left,
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+    display: flex;
+    position: absolute;
+    right: 0px;
+}
+
+.tooltip-wrapper
+{
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip-text
+{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #575757;
+    background-color: white;
+    padding: 3px 6px;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 11px;
+    box-shadow: 2px 2px 2px 0.5px #141617;
+    transition: opacity 0.2s ease 0.5s;
+    z-index: 999;
+    pointer-events: none;
+    border: 0.5px solid #767676;
+}
+
+.tooltip-text1
+{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(0%);
+    color: #575757;
+    background-color: white;
+    padding: 3px 6px;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 11px;
+    box-shadow: 2px 2px 2px 0.5px #141617;
+    transition: opacity 0.2s ease 0.5s;
+    z-index: 999;
+    pointer-events: none;
+    border: 0.5px solid #767676;
+}
+
+.tooltip-text2
+{
+    position: absolute;
+    bottom: 100%;
+    right: -5px;
+    transform: translateX(0%);
+    color: #575757;
+    background-color: white;
+    padding: 3px 6px;
+    opacity: 0;
+    white-space: nowrap;
+    font-size: 11px;
+    box-shadow: 2px 2px 2px 0.5px #141617;
+    transition: opacity 0.2s ease 0.5s;
+    z-index: 999;
+    pointer-events: none;
+    border: 0.5px solid #767676;
+}
+  
+.tooltip-wrapper:hover .tooltip-text
+{
+    opacity: 1;
+}
+
+.tooltip-wrapper:hover .tooltip-text1 
+{
+    opacity: 1;
+}
+
+.tooltip-wrapper:hover .tooltip-text2
+{
+    opacity: 1;
+}
+
+
+.icon-windows
+{   
+    font-size: 17px;
+    color: white;
+    display: inline-block;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 1px;
+    transition: background-color 0.2 ease-in-out;
+}
+
+.icon-windows:hover
+{   
+    background-color: #343638;
+    color: #429ce3;
+
+}
+
+.searcher
+{
+    width: 288px;
+    height: 45px;
+    line-height: 45px;
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 1px #c2c2c2;
+    position: relative;
+    box-sizing: border-box;;
+    max-width: 90vw;
+}
+
+.icon-search
+{
+    font-size: 20px;
+    transform: scaleX(-1);
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    position: relative;
+    margin-left: 10px;
+    color: #2f2f2f;
+}
+
+.wyszukaj
+{
+    border: none;
+    font-size: 15px;
+}
+
+.wyszukaj::placeholder
+{
+
+    color: #2f2f2f;
+}
+
+.searcher-block
+{
+    width: 100%;
+    max-width: 784px;
+    height: 635px;
+    position: absolute;
+    background-color: #1e2122;
+    border-top: 1px solid #23465e;
+    border-left: 1px solid #23465e;
+    border-right: 1px solid #23465e;
+    filter: opacity(90%);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    bottom: 100%;
+    opacity: 0;
+}
+
+
+.test
+{
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    z-index: -1;
+}
+
+input:focus
+{
+    outline: none;
+}
+
+.searcher:hover
+{
+    box-shadow: inset 0px 0px 0px 2px #c2c2c2;
+}
+
+.searcher:has(input:focus)
+{
+    box-shadow: inset 0px 0px 0px 2px #0078d7;
+    border: none;
+}
+
+.searcher:focus 
+{
+    box-shadow: inset 0px 0px 0px 2px #0078d7;
+    border: none;
+}
+
+.taskview
+{
+    width: 48px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3px;
+    position: relative;
+
+}
+
+.tv2
+{
+    position: absolute;
+    visibility: hidden;
+}
+
+.taskview:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.taskview:hover .tv1
+{
+    visibility: hidden;
+}
+
+.taskview:hover .tv2
+{
+    visibility: visible;
+}
+
+.icon-shopping-bag
+{   
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    border-radius: 1px;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 1px;
+}
+
+.icon-shopping-bag:hover
+{   
+    background-color: #343638;
+}
+
+.icon-spotify
+{   
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 26px;
+    border-radius: 1px;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 1px;
+}
+
+.icon-spotify:hover
+{   
+    background-color: #343638;
+}
+
+.icon-chrome
+{   
+    color: white;
+    text-align: center;
+    display: inline-block;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    border-radius: 1px;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 1px;
+}
+
+.icon-chrome:hover
+{   
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.icon-mail-alt
+{   
+    color: white;
+    text-align: center;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22px;
+    border-radius: 1px;
+    transition: background-color 0.1s ease-in-out;
+    margin-right: 1px;
+}
+
+.icon-mail-alt:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.line 
+{
+    width: 5px;
+    height: 45px;
+    background-color: #1e2122;
+    border-left: 1px solid #7a7c7c;
+    right: 0px;
+}
+
+.line:hover
+{
+    background-color: #343638;
+}
+
+.icon-comment
+{
+    width: 40px;
+    height: 45px;
+    color: white;
+    line-height: 45px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.icon-comment:hover
+{
+   background-color: #343638;
+}
+
+.time
+{
+
+    line-height: 18px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e2122;
+    height: 45px;
+    width: 66px;
+    padding-top: 5px;
+    letter-spacing: -0.9px;
+    user-select: none;
+}
+
+.date {
+  font-size: 12px;
+}
+
+.time:hover
+{
+    background-color: #343638;
+}
+
+.ink-parent
+{
+    height: 45px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.winink
+{
+
+    width: 20px;
+    height: auto;
+    filter:invert(1)
+}
+
+.ink-parent:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.icon-volume
+{
+    width: 22px;
+    height: 45px;
+    color: white;
+    line-height: 45px;
+    margin-right: 1px;
+}
+
+.icon-volume:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.wifi-p
+{
+    width: 22px;
+    height: 45px;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.icon-wifi
+{
+    color: white;
+    line-height: 53px;
+    transform: rotate(315deg);
+    display: block;
+}
+
+.wifi-p:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+.icon-up-open-big
+{
+    width: 24px;
+    height: 45px;
+    color: white;
+    line-height: 47px;
+    margin-right: 1px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.icon-up-open-big:hover
+{
+    background-color: #343638;
+    border-radius: 1px;
+}
+
+@keyframes opacity {
+    0% { opacity: 1;}
+    50% { opacity: 0.7;}
+    100% { opacity: 1;}
+}
+
+.weather
+{
+    margin-left: 0;
+    width: 198px;
+    background-color: #1e2122;
+    margin-right: 8px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    opacity: 1;
+}
+
+.weather:hover
+{
+    background-color: #2f2f2f;
+    border-radius: 1px;
+    animation: opacity 0.7s ease-in-out 1;
+}
+
+.weather-text
+{
+    color: white;
+    font-size: 13px;
+    user-select: none;
+    position: relative;
+    left: 5px;
+}
+
+.cloud
+{
+    width: 30px;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    left: 10px;
+
+}
+
+.weather:hover .cloud
+{
+    animation: cloudMove 500ms 1 ease-in-out forwards;
+}
+
+.moon
+{
+    width: 16px;
+    position: relative;
+    right: 20px;
+    bottom: 9px;
+    z-index: -1;
+    transform: scaleX(-1);
+
+}
+
+.weather:hover .moon
+{
+    animation: moonMove 500ms 1 ease-in-out forwards;
+}
+
+@keyframes moonMove {
+    0% { transform: scaleX(-1) rotate(0deg); }
+    50% { transform: scaleX(-1) rotate(15deg); }
+    100% { transform: scaleX(-1) rotate(0deg); }
+}
+
+@keyframes cloudMove {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (max-width: 480px) {
+  .footer1 {
+    justify-content: center;
+  }
+
+  .searcher {
+    width: 90vw;
+    margin: 5px 0;
+  }
+
+  .tooltip-text,
+  .tooltip-text1,
+  .tooltip-text2 {
+    display: none;
+  }
+
+  .weather-text {
+    display: none;
+  }
+
+  .time {
+    font-size: 11px;
+    width: auto;
+    padding: 0 5px;
+  }
+
+  .icon-windows,
+  .icon-spotify,
+  .icon-mail-alt,
+  .icon-comment {
+    font-size: 18px;
+    width: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer .right,
+  .footer .center,
+  .footer .left {
+    display: none;
+  }
+}
